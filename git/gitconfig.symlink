@@ -1,0 +1,22 @@
+[gui]
+[user]
+	name = Ryan Doving
+	email = ryan@seaportstainless.com
+[gui]
+	recentrepo = C:/Users/Ryan Doving/autohotkey
+[core]
+	editor = vim
+[push]
+	default = simple
+[diff]
+	external = 'C:/Program Files (x86)/Git/cmd/git-diff-wrapper.sh'
+[merge]
+	tool = winmerge
+[mergetool "winmerge"]
+	cmd = git-merge-wrapper.sh "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+merge = merge --no-ff
+co = checkout
